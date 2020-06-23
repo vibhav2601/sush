@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+  var div = document.getElementById("myDiv");
+  var rect = div.getBoundingClientRect();
+  x = rect.left;
+  y = rect.top;
+  w = rect.width;
+  h = rect.height;
+  alert ("Left: " + x + ", Top: " + y + ", Width: " + w + ", Height: " + h);
+}
+</script>
+</head>
+
+<body>
+<div style="height:200px; ">
+<div style=" height:150px; border:1px solid red; margin-top:20px;">
+Return the top-left corner of this element relative to the top left corner of the viewport with the button below.<br>
+Also try to use the scrollbars to test the method for different positions.
+</div>
+<img src="anup.jpg" id="myDiv">
+
+</div>
+<br>
+<button onclick="myFunction()">Get top-left corner + witdth and height of the element with red border</button>
+</body>
+</html>
